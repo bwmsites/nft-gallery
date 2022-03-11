@@ -1,10 +1,10 @@
 {
-  "name": "nft-gallery",
+  "name": "wisdon-nft",
   "version": "0.0.1",
-  "description": "",
+  "description": "Wisdon NFT",
   "author": "",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "ISC",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

@@ -11,7 +11,7 @@ import configuration from '@config/app/configuration';
         ConfigModule.forRoot({
             load: [configuration],
             validationSchema: Joi.object({
-                APP_NAME: Joi.string().default('Wisdon'),
+                APP_NAME: Joi.string().default('wisdon-nft'),
                 APP_ENV: Joi.string()
                     .valid(
                         AppEnvEnum.DEVELOPMENT,
