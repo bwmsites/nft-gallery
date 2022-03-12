@@ -73,7 +73,12 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@src/(.*)": "<rootDir>/$1",
+      "@config/(.*)": "<rootDir>/config/$1",
+      "@common/(.*)": "<rootDir>/common/$1"
+    }
   },
   "husky": {
     "hooks": {

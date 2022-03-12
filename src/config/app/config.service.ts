@@ -20,4 +20,8 @@ export class AppConfigService {
     get port(): number {
         return this._configService.get<number>('app.port');
     }
+
+    get version(): string {
+        return this._configService.get<string>('app.version');
+    }
 }
