@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HealthCheckService } from './health-check.service';
+import { HealthCheckService } from '@modules/health-check/health-check.service';
 import { AppConfigModule } from '@config/app/config.module';
 
-import { version } from '../../package.json';
+import { version } from '../../../package.json';
 
 describe('HealthCheckService', () => {
     let service: HealthCheckService;

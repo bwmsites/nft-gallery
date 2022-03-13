@@ -6,5 +6,5 @@ const path = resolve(__dirname, '../..');
 moduleAlias.addAliases({
     '@src': join(path),
     '@config': join(path, 'config'),
-    '@domain': join(path, 'domain'),
+    '@modules': join(path, 'modules'),
 });

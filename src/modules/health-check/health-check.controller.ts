@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 
 import type { HealthCheckResponseType } from '@common/type/HealthCheckResponseType';
-import { HealthCheckService } from '@src/health-check/health-check.service';
+import { HealthCheckService } from '@modules/health-check/health-check.service';
 
 @Controller('_health')
 export class HealthCheckController {

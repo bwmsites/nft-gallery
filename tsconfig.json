@@ -22,7 +22,7 @@
       "@src/*": ["./src/*"],
       "@config/*": ["./src/config/*"],
       "@common/*": ["./src/common/*"],
-      "@domain/*": ["./src/domain/*"]
+      "@modules/*": ["./src/modules/*"]
     }
   }
 }
