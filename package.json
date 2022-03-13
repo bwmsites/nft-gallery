@@ -26,6 +26,7 @@
     "@nestjs/config": "^1.2.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@solana/web3.js": "^1.36.0",
     "@types/module-alias": "^2.0.1",
     "joi": "^17.6.0",
     "module-alias": "^2.2.2",
