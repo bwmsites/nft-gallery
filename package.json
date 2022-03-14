@@ -29,6 +29,8 @@
     "@nfteyez/sol-rayz": "^0.10.2",
     "@solana/web3.js": "^1.36.0",
     "@types/module-alias": "^2.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "joi": "^17.6.0",
     "module-alias": "^2.2.2",
     "reflect-metadata": "^0.1.13",
