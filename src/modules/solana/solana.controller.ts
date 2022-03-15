@@ -9,6 +9,8 @@ import { SolanaService } from '@modules/solana/solana.service';
 import { GetNftsByAddressQueryDTO } from '@modules/solana/dto/GetNftsByAddressQuery.dto';
 import { ResponseHandlerInterceptor } from '@common/interceptors/response-handler.interceptor';
 
+import type { GetNftsByAddressResponseType } from '@common/type/GetNftsByAddressResponseType';
+
 @Controller('solana/nfts')
 @UseInterceptors(ResponseHandlerInterceptor)
 export class SolanaController {
@@ -22,7 +24,7 @@ export class SolanaController {
             }),
         )
         query: GetNftsByAddressQueryDTO,
-    ): Promise<unknown> {
+    ): Promise<GetNftsByAddressResponseType[]> {
         const { address } = query;
 
         return this._solanaService.getNftsByAddress(address);
