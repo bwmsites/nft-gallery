@@ -1,4 +1,10 @@
-import { HttpStatus, Injectable, CACHE_MANAGER, Inject } from '@nestjs/common';
+import {
+    HttpStatus,
+    Injectable,
+    CACHE_MANAGER,
+    Inject,
+    Logger,
+} from '@nestjs/common';
 import {
     resolveToWalletAddress,
     getParsedNftAccountsByOwner,
@@ -20,6 +26,8 @@ export class SolanaService {
         @Inject(CACHE_MANAGER) private cacheManager: Cache,
     ) {}
 
+    private logger = new Logger(SolanaService.name);
+
     private async getNftDetails(
         url: string,
     ): Promise<GetParsedNftAccountsByOwnerDetailsResponseType> {
@@ -34,6 +42,7 @@ export class SolanaService {
         address: string,
     ): Promise<GetNftsByAddressResponseType[]> {
         try {
+            this.logger.log('Calling service to fetch NFTs.');
             // Checks if there are data cached for the given address
             const cachedResponse = await this.cacheManager.get(address);
 
@@ -62,7 +71,10 @@ export class SolanaService {
 
             return responseData;
         } catch (error) {
-            console.log('Error while trying to fecth NFTs', error.message);
+            this.logger.error(
+                'Error while trying to fecth NFTs',
+                error.message,
+            );
             throw new CustomHttpExceptionHelper(
                 error,
                 HttpStatus.UNPROCESSABLE_ENTITY,
