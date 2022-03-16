@@ -23,7 +23,7 @@ describe('Solana Operations', () => {
 
     beforeAll(async () => {
         const moduleRef = await Test.createTestingModule({
-            imports: [SolanaModule, CacheModule.register({ ttl: 0 })],
+            imports: [SolanaModule, CacheModule.register({ ttl: 120 })],
         })
             .overrideProvider(SolanaService)
             .useValue(solanaService)
