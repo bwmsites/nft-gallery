@@ -1,8 +1,15 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import {
+    HttpStatus,
+    Injectable,
+    CACHE_MANAGER,
+    Inject,
+    Logger,
+} from '@nestjs/common';
 import {
     resolveToWalletAddress,
     getParsedNftAccountsByOwner,
 } from '@nfteyez/sol-rayz';
+import { Cache } from 'cache-manager';
 import { CustomHttpExceptionHelper } from '@common/helpers/exception/custom-http-exception.helper';
 import { SolanaServiceResponseParser } from './parser/solana-service-response-parser';
 import { HttpService } from '@nestjs/axios';
@@ -14,7 +21,12 @@ import type { GetParsedNftAccountsByOwnerDetailsResponseType } from '@common/typ
 
 @Injectable()
 export class SolanaService {
-    constructor(private httpService: HttpService) {}
+    constructor(
+        private httpService: HttpService,
+        @Inject(CACHE_MANAGER) private cacheManager: Cache,
+    ) {}
+
+    private logger = new Logger(SolanaService.name);
 
     private async getNftDetails(
         url: string,
@@ -30,6 +42,15 @@ export class SolanaService {
         address: string,
     ): Promise<GetNftsByAddressResponseType[]> {
         try {
+            this.logger.log('Calling service to fetch NFTs.');
+            // Checks if there are data cached for the given address
+            const cachedResponse = await this.cacheManager.get(address);
+
+            // Returns de cached response
+            if (cachedResponse && cachedResponse != null) {
+                return cachedResponse as GetNftsByAddressResponseType[];
+            }
+
             const publicAddress = await resolveToWalletAddress({
                 text: address,
             });
@@ -39,12 +60,21 @@ export class SolanaService {
                     publicAddress,
                 });
 
-            return SolanaServiceResponseParser.getNftsByAddress(
-                nftData,
-                async (url: string) => this.getNftDetails(url),
-            );
+            const responseData =
+                await SolanaServiceResponseParser.getNftsByAddress(
+                    nftData,
+                    async (url: string) => this.getNftDetails(url),
+                );
+
+            // Caches response data
+            await this.cacheManager.set(address, responseData);
+
+            return responseData;
         } catch (error) {
-            console.log('Error while trying to fecth NFTs', error.message);
+            this.logger.error(
+                'Error while trying to fecth NFTs',
+                error.message,
+            );
             throw new CustomHttpExceptionHelper(
                 error,
                 HttpStatus.UNPROCESSABLE_ENTITY,

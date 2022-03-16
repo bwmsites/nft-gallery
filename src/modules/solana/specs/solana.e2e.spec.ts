@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { Test } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
+import { CacheModule, INestApplication } from '@nestjs/common';
 
 import { SolanaModule } from '@modules/solana/solana.module';
 import { SolanaService } from '@modules/solana/solana.service';
@@ -23,7 +23,7 @@ describe('Solana Operations', () => {
 
     beforeAll(async () => {
         const moduleRef = await Test.createTestingModule({
-            imports: [SolanaModule],
+            imports: [SolanaModule, CacheModule.register({ ttl: 0 })],
         })
             .overrideProvider(SolanaService)
             .useValue(solanaService)

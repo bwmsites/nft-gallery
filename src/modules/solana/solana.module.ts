@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { CacheModule, Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { SolanaService } from '@modules/solana/solana.service';
 import { SolanaController } from '@modules/solana/solana.controller';
@@ -11,6 +11,7 @@ import { SolanaController } from '@modules/solana/solana.controller';
                 maxRedirects: 5,
             }),
         }),
+        CacheModule.register({ ttl: 0 }),
     ],
     providers: [SolanaService],
     controllers: [SolanaController],
