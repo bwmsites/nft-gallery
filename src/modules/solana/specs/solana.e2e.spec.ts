@@ -51,9 +51,11 @@ describe('Solana Operations', () => {
                 address: 'ab1cd2efg3hijk_mno45',
             });
 
-        const body = response.body as GetNftsByAddressRestResponseType;
+        const {
+            data: { data: body },
+        } = response.body as GetNftsByAddressRestResponseType;
 
         expect(response.status).toBe(200);
-        expect(body.data.data).toStrictEqual(GetNftsByAddressResponseMock.data);
+        expect(body).toStrictEqual(GetNftsByAddressResponseMock.data);
     });
 });
