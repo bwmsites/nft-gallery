@@ -1,0 +1,272 @@
+{
+	"links": {
+		"self": "http://localhost:5001/solana/nfts?address=GzYfWA3af4M29VdmDaCvUvyUnm9JkFZsybFoRg2J31qJ"
+	},
+	"data": [
+		{
+			"id": 4,
+			"updateAuthority": "2JcnTdycLsdkv8qnMWEMLjKdStfXaUwC4UoFjVGVmukz",
+			"mint": "CxQZ1WrrzQcQbzpL9A2VCjjv8ji3jyeihT2qayb4bxvV",
+			"details": {
+				"nftName": "Galabot #248",
+				"symbol": "",
+				"description": "Experience the power of automation. Mint, scan and extract your favourite NFT projects.",
+				"sellerFeeBasisPoints": 700,
+				"imageUrl": "https://www.arweave.net/OTr-J55g7KIDMAI4VdrOqPhOarwkqkvBquVCrYWSgrs?ext=png",
+				"atributes": [
+					{
+						"type": "Particles",
+						"value": "Purple Hypernova"
+					},
+					{
+						"type": "Bot",
+						"value": "Hoshi"
+					}
+				],
+				"collection": {
+					"name": "Galaxity NFT",
+					"family": "Galaxity"
+				},
+				"properties": {
+					"files": [
+						{
+							"fileType": "image/png",
+							"fileUrl": "https://www.arweave.net/OTr-J55g7KIDMAI4VdrOqPhOarwkqkvBquVCrYWSgrs?ext=png"
+						}
+					],
+					"category": "image",
+					"creators": [
+						{
+							"address": "EK7PgJ2QZsqBS1S88yBkvfntCJBtPiZXpBj1XzZekc6n",
+							"isVerified": true,
+							"share": 0
+						},
+						{
+							"address": "4AF3w2mW6xiAUsVAhDqLuSL7cMZaCtfHRT34VewCwQsQ",
+							"isVerified": false,
+							"share": 100
+						}
+					]
+				}
+			},
+			"isMutable": 1,
+			"primarySaleHappened": 1
+		},
+		{
+			"id": 4,
+			"updateAuthority": "3WN5foMHtZSH6d1agwNkP7JdBsJcBGtY25PkCM63asNu",
+			"mint": "2hWrFTaGYXNLEVnTdvYPF5roxp4NSygoC8BYWYHYLuXd",
+			"details": {
+				"nftName": "Pleb Wojak",
+				"symbol": "PLEB",
+				"description": "Pleb Wojak is the foundational NFT for the Rare Wojak project. The path to waifu begins with a Pleb.",
+				"sellerFeeBasisPoints": 1,
+				"imageUrl": "https://nft.rarewojak.com/pleb/pleb.png?ext=png",
+				"externalUrl": "https://mint.rarewojak.com",
+				"atributes": [
+					{
+						"type": "Body",
+						"value": "Pleb"
+					},
+					{
+						"type": "Flair",
+						"value": "Pitchfork"
+					},
+					{
+						"type": "Face",
+						"value": "Pleb"
+					},
+					{
+						"type": "Background",
+						"value": "Farm"
+					},
+					{
+						"type": "Skin",
+						"value": "White"
+					},
+					{
+						"type": "Twitter",
+						"value": "@rare_wojak"
+					},
+					{
+						"type": "Discord",
+						"value": "discord.gg/rarewojak"
+					}
+				],
+				"collection": {
+					"name": "Pleb Wojak",
+					"family": "Rare Wojak"
+				},
+				"properties": {
+					"files": [
+						{
+							"fileType": "image/png",
+							"fileUrl": "https://nft.rarewojak.com/pleb/pleb.png?ext=png"
+						}
+					],
+					"category": "image",
+					"creators": [
+						{
+							"address": "3WN5foMHtZSH6d1agwNkP7JdBsJcBGtY25PkCM63asNu",
+							"isVerified": true,
+							"share": 100
+						}
+					]
+				}
+			},
+			"isMutable": 1,
+			"primarySaleHappened": 1
+		},
+		{
+			"id": 4,
+			"updateAuthority": "8ZCUGUcMqvfzev9bdc5KwcL6bthTNxsgtYQ6NYUCJJ22",
+			"mint": "2kXaJE8WRTK6hYWL4ycKx3yS7WNR8GtMbn5UGQK7F8Z3",
+			"details": {
+				"nftName": "Paradise #1033",
+				"symbol": "PJP",
+				"sellerFeeBasisPoints": 800,
+				"imageUrl": "https://www.arweave.net/-UICLaxCjGi_lTIwddizakwu1B9F8FzD5lEX1gMWmp0?ext=png",
+				"atributes": [
+					{
+						"type": "Backgrounds",
+						"value": "Pink"
+					},
+					{
+						"type": "Back Accessories",
+						"value": "Single Katana"
+					},
+					{
+						"type": "Bases",
+						"value": "Blue Eyes"
+					},
+					{
+						"type": "Clothes",
+						"value": "Tatoos"
+					},
+					{
+						"type": "Hair",
+						"value": "Purple Straight"
+					},
+					{
+						"type": "Earrings",
+						"value": "Feather Earring"
+					},
+					{
+						"type": "Masks",
+						"value": "None"
+					},
+					{
+						"type": "Chokers",
+						"value": "None"
+					},
+					{
+						"type": "Outer Clothes",
+						"value": "None"
+					}
+				],
+				"collection": {
+					"name": "Projekt Paradise",
+					"family": "Series 1"
+				},
+				"properties": {
+					"files": [
+						{
+							"fileType": "image/png",
+							"fileUrl": "https://www.arweave.net/-UICLaxCjGi_lTIwddizakwu1B9F8FzD5lEX1gMWmp0?ext=png"
+						}
+					],
+					"creators": [
+						{
+							"address": "DJ5EyNRaUnCnZx4A5LdYzFsiNECvjzuT4ccBnPn3Nwgz",
+							"isVerified": true,
+							"share": 0
+						},
+						{
+							"address": "6YMJcttPSuHY8CRJtLuptoyW5XrNgHihVhWyGwjKftpd",
+							"isVerified": false,
+							"share": 65
+						},
+						{
+							"address": "BSKzYb5HpLpvRUmCoSSqcTSWddjXhwTPmJkn4my1siBu",
+							"isVerified": false,
+							"share": 15
+						},
+						{
+							"address": "3A6AKRGHZoebKF59EJuB4EYbFTxMNDbXHZ6BsUxhLcd2",
+							"isVerified": false,
+							"share": 20
+						},
+						{
+							"address": "9SEkdVXUKiKhbobaX6t4tCuhCqjT78F66KRZSSYYYeQ",
+							"isVerified": false,
+							"share": 0
+						}
+					]
+				}
+			},
+			"isMutable": 1,
+			"primarySaleHappened": 1
+		},
+		{
+			"id": 4,
+			"updateAuthority": "Ef896VQS1tfMACgL5Ce1TR7JZhehkrtowCyZZyYv7SWn",
+			"mint": "FcKYDqKNJKhryH1TCzJ4ZyJSbWMBeK5tmnV9ZP6W1vfa",
+			"details": {
+				"nftName": "Giddy Goblet",
+				"symbol": "NEONDRINK",
+				"description": "Neon Cocktail - Giddy Goblet",
+				"sellerFeeBasisPoints": 1000,
+				"imageUrl": "https://arweave.net/vLxP88J5r8jihPwCX94-fNVg3c0jjEqqGHStC-6q0nA?ext=gif",
+				"externalUrl": "https://neonexus.io",
+				"atributes": [
+					{
+						"type": "Event",
+						"value": "Governor's Ball"
+					},
+					{
+						"type": "City",
+						"value": "NeoNexus"
+					},
+					{
+						"type": "Item",
+						"value": "Neon Cocktail"
+					},
+					{
+						"type": "Origin",
+						"value": "Airdrop"
+					},
+					{
+						"type": "Drink",
+						"value": "Giddy Goblet"
+					},
+					{
+						"type": "Artist",
+						"value": "Alex Insouratselou"
+					}
+				],
+				"collection": {
+					"name": "Neon Cocktails",
+					"family": "Raynesfere"
+				},
+				"properties": {
+					"files": [
+						{
+							"fileType": "image/gif",
+							"fileUrl": "https://arweave.net/vLxP88J5r8jihPwCX94-fNVg3c0jjEqqGHStC-6q0nA?ext=gif"
+						}
+					],
+					"category": "image",
+					"creators": [
+						{
+							"address": "Ef896VQS1tfMACgL5Ce1TR7JZhehkrtowCyZZyYv7SWn",
+							"isVerified": true,
+							"share": 100
+						}
+					]
+				}
+			},
+			"isMutable": 1,
+			"primarySaleHappened": 0
+		}
+	]
+}
