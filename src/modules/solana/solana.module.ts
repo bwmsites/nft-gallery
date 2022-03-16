@@ -11,7 +11,7 @@ import { SolanaController } from '@modules/solana/solana.controller';
                 maxRedirects: 5,
             }),
         }),
-        CacheModule.register({ ttl: 0 }),
+        CacheModule.register({ ttl: 120 }),
     ],
     providers: [SolanaService],
     controllers: [SolanaController],
