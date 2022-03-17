@@ -1,0 +1,55 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type attributes {
+  type: String!
+  value: String!
+}
+
+type collection {
+  name: String!
+  family: String!
+}
+
+type files {
+  fileUrl: String!
+  fileType: String!
+}
+
+type creators {
+  address: String!
+  isVerified: Boolean!
+  share: Float!
+}
+
+type properties {
+  files: [files!]!
+  category: String!
+  creators: [creators!]!
+}
+
+type NftDetailsType {
+  nftName: String!
+  symbol: String!
+  description: String!
+  sellerFeeBasisPoints: Int!
+  imageUrl: String!
+  externalUrl: String!
+  atributes: [attributes!]!
+  collection: collection!
+  properties: properties!
+}
+
+type NftType {
+  id: Int!
+  updateAuthority: String!
+  mint: String!
+  details: NftDetailsType!
+  primarySaleHappened: Boolean!
+  isMutable: Boolean!
+}
+
+type Query {
+  nfts(address: String!): [NftType!]!
+}
