@@ -95,8 +95,6 @@ The easiest way to test the GraphQL queries is by accessing the link bellow in y
   http://localhost:<port_from_env>/graphql
 ```
 
-Takes two numbers and returns the sum.
-
 ## Stay in touch
 
 -   Author - [Bruno C. Silva](https://www.linkedin.com/in/brunobwm/)
