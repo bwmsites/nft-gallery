@@ -67,12 +67,32 @@ $ yarn start:dev
 $ yarn start:prod
 ```
 
-## Testing
+## Automated Tests
 
 ```bash
 # unit tests
 $ yarn test
 
+```
+
+## API Reference
+
+#### Get NFTs from a Wallet by a given address
+
+```http
+  GET /solana/nfts
+```
+
+| Parameter | Type     | Description                                          |
+| :-------- | :------- | :--------------------------------------------------- |
+| `address` | `string` | **Required**. A valid Solana hash for wallet address |
+
+## GraphQL
+
+The easiest way to test the GraphQL queries is by accessing the link bellow in your favorite browser and enjoy the playground.
+
+```http
+  http://localhost:<port_from_env>/graphql
 ```
 
 ## Stay in touch
