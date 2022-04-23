@@ -40,30 +40,17 @@ export abstract class SolanaServiceResponseParser {
         };
     }
 
-    static async getNftsByAddress(
-        responseData: GetParsedNftAccountsByOwnerResponseType[],
-        getDetailsFn: (
-            url: string,
-        ) => Promise<GetParsedNftAccountsByOwnerDetailsResponseType>,
-    ): Promise<GetNftsByAddressResponseType[]> {
-        return Promise.all(
-            responseData.map(async (response) => {
-                const detailsResponseData = await getDetailsFn(
-                    response.data.uri,
-                );
-
-                return {
-                    id: response.key,
-                    updateAuthority: response.updateAuthority,
-                    mint: response.mint,
-                    details: this.parseDetails(
-                        detailsResponseData,
-                        response.data,
-                    ),
-                    isMutable: response.isMutable,
-                    primarySaleHappened: response.primarySaleHappened,
-                };
-            }),
-        );
+    static getNftsByAddress(
+        responseData: GetParsedNftAccountsByOwnerResponseType,
+        detailsResponseData: GetParsedNftAccountsByOwnerDetailsResponseType,
+    ): GetNftsByAddressResponseType {
+        return {
+            id: responseData.key,
+            updateAuthority: responseData.updateAuthority,
+            mint: responseData.mint,
+            details: this.parseDetails(detailsResponseData, responseData.data),
+            isMutable: responseData.isMutable,
+            primarySaleHappened: responseData.primarySaleHappened,
+        };
     }
 }

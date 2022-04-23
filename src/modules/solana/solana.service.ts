@@ -43,6 +43,7 @@ export class SolanaService {
     ): Promise<GetNftsByAddressResponseType[]> {
         try {
             this.logger.log('Calling service to fetch NFTs.');
+
             // Checks if there are data cached for the given address
             const cachedResponse = await this.cacheManager.get(address);
 
@@ -60,11 +61,16 @@ export class SolanaService {
                     publicAddress,
                 });
 
-            const responseData =
-                await SolanaServiceResponseParser.getNftsByAddress(
-                    nftData,
-                    async (url: string) => this.getNftDetails(url),
-                );
+            const responseData = await Promise.all(
+                nftData.map(async (nft) => {
+                    const details = await this.getNftDetails(nft.data.uri);
+
+                    return SolanaServiceResponseParser.getNftsByAddress(
+                        nft,
+                        details,
+                    );
+                }),
+            );
 
             // Caches response data
             await this.cacheManager.set(address, responseData);
